@@ -1,0 +1,65 @@
+from ctypes import sizeof
+print ("hello world welcome to sets")
+a=set([])
+no=int(input("Enter the total number in Set A"))
+for i in range(no):
+    m=int(input("Enter Elements"))
+    a.add(m);
+b=set([])
+no=int(input("Enter The Total Number in Set B"))
+for i in range(no):
+	 m=int(input("Enter Elements"))
+	 b.add(m);
+print("Set A:",a)
+print("Set B:",b)
+while 1:
+ print("\n\n\n****MENU*****\n")
+ print("1:Union")
+ print("2:Intersection")
+ print("3:Set Differene")
+ print("4:Subset")
+ print("5:Is empty")
+ print("6:Len of A")
+ print("7:Len of B")
+ print("8:size of A and B")
+ print("9:searching")
+ print("10:add Element")
+ print("11:Remove Element")
+ #print("12:isContains")
+ #print("\n\n")
+ ch=int(input("\n*****Enter your Choice*****\n"))
+ if ch==1:
+  print("\n Union of A and B as",a.union(b))
+ if ch==2:
+  print("\n Intersection of A and B",a.intersection(b))
+ if ch==3:
+  print("\n Set difference A-B as",a-b)
+ if ch==4:
+  if a.issubset(b):
+   print("\nIs subset")
+  else:
+       print("\n not a subset")
+ if ch==5:
+  if len(a)==0:
+    print("\n Set A is Empty")
+  else:
+       print("\n Set A is not Empty")
+ if ch==6:
+  print("Len A=",len(a))
+ if ch==7:
+  print("Len B=",len(b))
+ if ch==8:
+  print("\n size of a is :",sizeof(a))
+  print("\n size of a is :",sizeof(b))
+ if ch==9:
+  num = int(input("\n Enter the element to be searched"))
+  if num in a :
+    print("\n number is found in set A")
+  elif num in b:
+    print("\n Number is found in Set B")
+  else:
+    print("\n\n Sorry ! Number not Found")
+ if ch==10:
+  ad = int(input("Enter Number To Be added in Set A"))
+  print("\n number Added in Set A")
+  print("\n updated set: ",a)
